@@ -427,9 +427,11 @@ void VisView::setQTDialog(QTIrrlichtOrbifordVis * qt)
 
 void VisView::startVisView()
 {
-	if (!isRunning()) {
-		start(LowPriority);
-	}
+	//if (!isRunning()) {
+	//	start(LowPriority);
+	//}
+
+	run();
 }
 
 

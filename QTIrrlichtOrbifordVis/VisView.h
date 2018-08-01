@@ -14,9 +14,9 @@ using namespace gui;
 
 class QTIrrlichtOrbifordVis;
 
-class VisView :public QThread
+class VisView /*:public QThread*/
 {
-	Q_OBJECT
+	//Q_OBJECT
 
 public:
 	VisView(QTIrrlichtOrbifordVis* qt, QObject *parent = 0);
@@ -57,7 +57,8 @@ public:
 	void startVisView();
 
 protected:
-	void run() override;
+	//void run() override;
+	void run();
 	void stop();
 
 private:

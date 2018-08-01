@@ -42,9 +42,6 @@
     <QtMoc Include="QTIrrlichtOrbifordVis.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="VisView.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QTIrrlichtOrbifordVis.ui">
@@ -58,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VisEventListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VisView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

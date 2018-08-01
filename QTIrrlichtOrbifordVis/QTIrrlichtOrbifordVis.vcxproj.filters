@@ -31,15 +31,18 @@
     <ClCompile Include="QTIrrlichtOrbifordVis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VisView.cpp">
+    <ClCompile Include="VisEventListener.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VisEventListener.cpp">
+    <ClCompile Include="irrlichtWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QTIrrlichtOrbifordVis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="irrlichtWidget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -55,9 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VisEventListener.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="VisView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

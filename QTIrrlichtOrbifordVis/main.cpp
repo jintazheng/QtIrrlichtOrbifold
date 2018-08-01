@@ -1,6 +1,5 @@
 #include "QTIrrlichtOrbifordVis.h"
 #include <QtWidgets/QApplication>
-#include "VisView.h"
 
 
 int main(int argc, char *argv[])
@@ -8,16 +7,11 @@ int main(int argc, char *argv[])
 	QApplication a(argc, argv);
 
 
-	QTIrrlichtOrbifordVis *w = new QTIrrlichtOrbifordVis();
-	w->show();
-	
-	VisView *m_visView = new VisView(w);
+	QTIrrlichtOrbifordVis *mainWindow = new QTIrrlichtOrbifordVis();
+	mainWindow->show();
 
-	m_visView->startVisView();
+	mainWindow->getIrrlichtWidget()->init();
 
-	//m_visView->run();
-	
-	//m_visView->start();
 	return a.exec();
 
 }

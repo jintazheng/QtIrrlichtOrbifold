@@ -2,6 +2,9 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_QTIrrlichtOrbifordVis.h"
+#include "irrlichtWidget.h"
+#include <QMessageBox>
+
 #include <iostream>
 #include <memory>
 
@@ -16,11 +19,20 @@ public:
 
 	void setVisView(VisView *vis);
 
+	irrlichtWidget* getIrrlichtWidget() { return irrWidget; }
+
+	bool eventFilter(QObject *target, QEvent *event);
+
 private slots:
-    void on_pushButton_stopAnimations_clicked();
+	
+	void irrWidgetResize(QSize);
+
+	void on_pushButton_stopAnimations_clicked();
+
+    void on_pushButton_AddObj_clicked();
 
 private:
 	Ui::QTIrrlichtOrbifordVisClass ui;
-	
-	std::unique_ptr<VisView> m_visView;
+	irrlichtWidget *irrWidget;
+	//std::unique_ptr<VisView> m_visView;
 };

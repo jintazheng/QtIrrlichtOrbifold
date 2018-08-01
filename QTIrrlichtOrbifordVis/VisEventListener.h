@@ -5,7 +5,7 @@
 using namespace irr;
 using namespace gui;
 
-class VisView;
+class irrlichtWidget;
 
 enum
 {
@@ -72,7 +72,7 @@ class MyEventReceiver : public IEventReceiver
 {
 public:
 
-	MyEventReceiver(VisView *);
+	MyEventReceiver(irrlichtWidget *);
 
 	virtual bool OnEvent(const SEvent& event);
 
@@ -91,5 +91,5 @@ public:
 	*/
 	void OnTextureFilterSelected(IGUIComboBox* combo);
 
-	VisView *m_visView;
+	irrlichtWidget *m_irr;
 };

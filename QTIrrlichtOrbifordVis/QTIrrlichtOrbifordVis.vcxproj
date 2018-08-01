@@ -115,30 +115,32 @@
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="irrlichtWidget.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="QTIrrlichtOrbifordVis.cpp" />
     <ClCompile Include="VisEventListener.cpp" />
-    <ClCompile Include="VisView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QTIrrlichtOrbifordVis.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="QTIrrlichtOrbifordVis.ui" />
+    <QtUic Include="QTIrrlichtOrbifordVis.ui">
+      <SubType>Designer</SubType>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="QTIrrlichtOrbifordVis.qrc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="VisEventListener.h" />
-    <ClInclude Include="VisView.h">
+    <QtMoc Include="irrlichtWidget.h">
       <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(ConfigurationName)\.;.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;$(SolutionDir)irrlicht\include;$(QTDIR)\include\QtConcurrent</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_WIDGETS_LIB;QT_XML_LIB;QT_XMLPATTERNS_LIB;QT_CONCURRENT_LIB</Define>
       <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(ConfigurationName)\.;.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtOpenGLExtensions;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtXmlPatterns;$(SolutionDir)irrlicht\include;$(QTDIR)\include\QtConcurrent</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_OPENGLEXTENSIONS_LIB;QT_WIDGETS_LIB;QT_XML_LIB;QT_XMLPATTERNS_LIB;QT_CONCURRENT_LIB</Define>
-    </ClInclude>
+    </QtMoc>
+    <ClInclude Include="VisEventListener.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
